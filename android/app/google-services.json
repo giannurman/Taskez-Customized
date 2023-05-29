@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "529708741333",
+    "project_id": "cad-it-hrms",
+    "storage_bucket": "cad-it-hrms.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:529708741333:android:a911d1857a7c5ebe54e85c",
+        "android_client_info": {
+          "package_name": "com.caditglobal.hrms"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "529708741333-c4n63t90qvfr73jhd4bc452n84a3ng0q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAURrGIRHDHahfjXTL2VFoUfzHSk9Ra_-E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "529708741333-c4n63t90qvfr73jhd4bc452n84a3ng0q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
