@@ -1,22 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:taskez/Screens/Auth/new_workspace.dart';
 import 'package:taskez/Values/values.dart';
 import 'package:taskez/widgets/DarkBackground/darkRadialBackground.dart';
 import 'package:taskez/widgets/Forms/form_input_with%20_label.dart';
 import 'package:taskez/widgets/Navigation/back.dart';
 
-class Login extends StatefulWidget {
-  final String email;
+import '../Dashboard/timeline.dart';
 
-  const Login({Key? key, required this.email}) : super(key: key);
+class Login extends StatefulWidget {
+  const Login({Key? key}) : super(key: key);
 
   @override
   _LoginState createState() => _LoginState();
 }
 
 class _LoginState extends State<Login> {
+  TextEditingController _emailController = new TextEditingController();
   TextEditingController _passController = new TextEditingController();
   bool obscureText = false;
   @override
@@ -36,17 +36,13 @@ class _LoginState extends State<Login> {
             NavigationBack(),
             SizedBox(height: 40),
             Text('Login', style: GoogleFonts.lato(color: Colors.white, fontSize: 40, fontWeight: FontWeight.bold)),
-            AppSpaces.verticalSpace20,
-            RichText(
-              text: TextSpan(
-                text: 'Using  ',
-                style: GoogleFonts.lato(color: HexColor.fromHex("676979")),
-                children: <TextSpan>[
-                  TextSpan(text: widget.email, style: TextStyle(color: Colors.white70, fontWeight: FontWeight.bold)),
-                  TextSpan(text: "  to login.", style: GoogleFonts.lato(color: HexColor.fromHex("676979"))),
-                ],
-              ),
-            ),
+            SizedBox(height: 30),
+            LabelledFormInput(
+              placeholder: "Email",
+              keyboardType: "text",
+              controller: _emailController,
+              obscureText: obscureText,
+              label: "Your Email"),
             SizedBox(height: 30),
             LabelledFormInput(
                 placeholder: "Password",
@@ -60,7 +56,7 @@ class _LoginState extends State<Login> {
               height: 60,
               child: ElevatedButton(
                   onPressed: () {
-                    Get.to(() => NewWorkSpace());
+                    Get.to(() => Timeline());
                   },
                   style: ButtonStyles.blueRounded,
                   child: Text('Sign In', style: GoogleFonts.lato(fontSize: 20, color: Colors.white))),

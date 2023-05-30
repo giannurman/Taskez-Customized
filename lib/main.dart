@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import 'package:overlay_support/overlay_support.dart';
 
 import 'Screens/splash_screen.dart';
 
@@ -17,16 +18,18 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Taskez',
-      theme: ThemeData(
-        brightness: Brightness.light,
-        appBarTheme: AppBarTheme(
-          systemOverlayStyle: SystemUiOverlayStyle.light,
-        ),
-      ),
-      home: SplashScreen(),
+    return OverlaySupport(
+        child: GetMaterialApp(
+          debugShowCheckedModeBanner: false,
+          title: 'Taskez',
+          theme: ThemeData(
+            brightness: Brightness.light,
+            appBarTheme: AppBarTheme(
+              systemOverlayStyle: SystemUiOverlayStyle.light,
+            ),
+          ),
+          home: SplashScreen(),
+        )
     );
   }
 }

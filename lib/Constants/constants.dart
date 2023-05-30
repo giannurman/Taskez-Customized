@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:taskez/Data/data_model.dart';
 import 'package:taskez/Screens/Dashboard/dashboard.dart';
-import 'package:taskez/Screens/Dashboard/notifications.dart';
+import 'package:taskez/Screens/Dashboard/notification_test.dart';
 import 'package:taskez/Screens/Dashboard/projects.dart';
 import 'package:taskez/Screens/Dashboard/search_screen.dart';
 import 'package:taskez/Values/values.dart';
@@ -12,7 +12,8 @@ String tabSpace = "\t\t\t";
 final List<Widget> dashBoardScreens = [
   Dashboard(),
   ProjectScreen(),
-  NotificationScreen(),
+  //NotificationScreen(),
+  NotificationTestScreen(),
   SearchScreen()
 ];
 

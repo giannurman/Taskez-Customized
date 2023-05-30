@@ -66,7 +66,7 @@ class _SignUpState extends State<SignUp> {
               height: 60,
               child: ElevatedButton(
                   onPressed: () {
-                    Get.to(() => Login(email: widget.email));
+                    Get.to(() => Login());
                   },
                   style: ButtonStyles.blueRounded,
                   child: Text('Sign Up', style: GoogleFonts.lato(fontSize: 20, color: Colors.white))),

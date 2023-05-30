@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:taskez/Screens/Auth/email_address.dart';
+import 'package:taskez/Screens/Auth/login.dart';
 import 'package:taskez/Values/values.dart';
 import 'package:taskez/widgets/DarkBackground/darkRadialBackground.dart';
 import 'package:taskez/widgets/Onboarding/image_outlined_button.dart';
@@ -90,7 +90,7 @@ class _OnboardingCarouselState extends State<OnboardingCarousel> {
                           height: 60,
                           child: ElevatedButton(
                               onPressed: () {
-                                Get.to(() => EmailAddressScreen());
+                                Get.to(() => Login());
                               },
                               style: ButtonStyle(
                                   backgroundColor: MaterialStateProperty.all(HexColor.fromHex("246CFE")),
